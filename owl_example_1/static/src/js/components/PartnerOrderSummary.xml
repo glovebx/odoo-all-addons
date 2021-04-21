@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <templates xml:space="preserve">
+<!--     <t t-name="owl_example_1.PartnerOrderSummary" owl="1">-->
+<!--         <div>My cool new widget</div>-->
+<!--     </t>-->
+
+<!--     <t t-name="owl_example_1.PartnerOrderSummary" owl="1">-->
+<!--         <div class="center" style="width: 100%; text-align: center; border: 1px solid #cecece; padding: 2rem 20%; margin: 12px 0;">-->
+<!--             <img-->
+<!--                 src="#"-->
+<!--                 width="75px"-->
+<!--                 height="75px"-->
+<!--                 style="background-color: #ccc; border-radius: 50%; margin-bottom: 10px;"/>-->
+
+<!--             &lt;!&ndash; Customer name &ndash;&gt;-->
+<!--             <p style="font-size: 16px; color: #4d4b4b;"><strong>Gemini Furniture</strong></p>-->
+
+<!--             &lt;!&ndash; Address &ndash;&gt;-->
+<!--             <p style="font-size: 12px; color: #8c8787;">-->
+<!--                 <i class="fa fa-map-marker" style="padding-right: 4px;"/>-->
+<!--                 <span>Fairfield</span>-->
+<!--             </p>-->
+
+<!--             &lt;!&ndash; Grid of previous order stats &ndash;&gt;-->
+<!--             <div class="row" style="padding-top: 20px;">-->
+<!--                 <div class="col-6" style="border-right: 1px solid #ccc;">-->
+<!--                     <p style="font-size: 20px;"><strong>35</strong></p>-->
+<!--                     <p style="font-size: 12px; color: #8c8787;">Orders</p>-->
+<!--                 </div>-->
+<!--                 <div class="col-6">-->
+<!--                     <p style="font-size: 20px;"><strong>$97,183.50</strong></p>-->
+<!--                     <p style="font-size: 12px; color: #8c8787;">Total Sales</p>-->
+<!--                 </div>-->
+<!--             </div>-->
+<!--         </div>-->
+<!--     </t>-->
+    <t t-name="owl_example_1.PartnerOrderSummary" owl="1">
+         <div class="center" style="width: 100%; text-align: center; border: 1px solid #cecece; padding: 2rem 20%; margin: 12px 0;">
+             <img
+                 t-attf-src="data:image/jpg;base64,{{partner.image_256}}"
+                 width="75px"
+                 height="75px"
+                 style="background-color: #ccc; border-radius: 50%; margin-bottom: 10px;"/>
+
+             <!-- Customer name -->
+             <p style="font-size: 16px; color: #4d4b4b;"><strong t-esc="partner.name"/></p>
+
+             <!-- Address -->
+             <p style="font-size: 12px; color: #8c8787;">
+                 <i class="fa fa-map-marker" style="padding-right: 4px;"/>
+                 <span t-esc="partner.city"/>
+                 <span t-esc="partner.zip" style="margin-left: 5px;"/>
+             </p>
+
+             <!-- Grid of previous order stats -->
+             <div class="row" style="padding-top: 20px;">
+                 <div class="col-6" style="border-right: 1px solid #ccc;">
+                     <p style="font-size: 20px;">
+                         <strong t-esc="partner.sale_order_count"/>
+                     </p>
+                     <p style="font-size: 12px; color: #8c8787;">Orders</p>
+                 </div>
+                 <div class="col-6">
+                     <p style="font-size: 20px;">
+                         <strong t-esc="partner.pos_order_count"/>
+                     </p>
+                     <p style="font-size: 12px; color: #8c8787;">PoS Orders</p>
+                 </div>
+             </div>
+         </div>
+     </t>
+ </templates>
