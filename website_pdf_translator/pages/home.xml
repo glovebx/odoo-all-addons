@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="website.homepage" model="ir.ui.view">
+        <field name="name">Website PDF Translator Home</field>
+        <field name="type">qweb</field>
+        <field name="key">website.homepage</field>
+        <field name="arch" type="xml">
+            <t name="Home" t-name="website.homepage">
+                <t t-call="website.layout">
+                    <div id="wrap" class="oe_structure oe_empty">
+
+                    <div class="tm-container">
+                        <div class="tm-row">
+                            <!-- Site Header -->
+                            <div class="tm-left">
+                                <div class="tm-left-inner">
+                                    <div class="tm-site-header">
+                                        <a href="/">
+                                            <i class="fas fa-coffee fa-3x tm-site-logo"></i>
+                                            <h1 class="tm-site-name">PDF Translator</h1>
+                                        </a>
+                                    </div>
+                                    <nav class="tm-site-nav">
+                                        <ul class="tm-site-nav-ul">
+                                            <li class="tm-page-nav-item">
+                                                <a href="#about" class="tm-page-link active about_us_menu">
+                                                    <i class="fas fa-users tm-page-link-icon"></i>
+                                                    <span>PDF</span>
+                                                </a>
+                                                <a href="#" class="link-detail">
+                                                    <span><i class="fa fa-expand"></i></span>
+                                                </a>
+                                            </li>
+                                            <li class="tm-page-nav-item">
+                                                <a href="#contact" class="tm-page-link">
+                                                    <i class="fas fa-comments tm-page-link-icon"></i>
+                                                    <span>Text</span>
+                                                </a>
+                                                <a href="#" class="link-detail">
+                                                    <span><i class="fa fa-expand"></i></span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="tm-right">
+                                <main class="tm-main">
+                                    <!-- PDF Page -->
+                                    <div id="about" class="tm-page-content">
+                                        <div class="tm-black-bg tm-contact-text-container">
+                                            <h2 class="tm-text-primary">Translate PDF file</h2>
+                                        </div>
+                                        <div class="tm-black-bg tm-contact-form-container tm-align-right">
+                                            <div class="row">
+                                                <form action="" method="post" enctype="multipart/form-data" class="o_website_js_translator_form col-md-8 col-lg-9">
+                                                    <div class="col-md-8 col-lg-9">
+                                                        <div class="row">
+                                                            <a href="#" class="btn btn-primary btn-lg oe_select_file">Upload</a>
+                                                            <input name="file" class="oe_import_file" style="display:none;" accept="application/pdf" type="file" required="required"/>
+                                                        </div>
+                                                        <div class="row">
+                                                            <span class="o_website_js_translator_filename"/>
+                                                        </div>
+                                                        <div class="row">
+                                                            <span class="o_website_js_translator_result"/>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end PDF Page -->
+
+                                    <!-- Text Page -->
+                                    <div id="contact" class="tm-page-content">
+                                        <div class="tm-black-bg tm-contact-text-container">
+                                            <h2 class="tm-text-primary">Translate Text (English ➡ Chinese)</h2>
+                                        </div>
+                                        <div class="tm-black-bg tm-contact-form-container tm-align-right">
+                                                <div class="form-group row form-field">
+                                                    <div class="col-lg-3 col-md-4">
+                                                        <label class="col-form-label" for="source">Source</label>
+                                                    </div>
+                                                    <div class="col-lg-9 col-md-8">
+                                                        <textarea rows='8' class="form-control" name="source" required=""/>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="offset-lg-3 offset-md-4 col-md-8 col-lg-9">
+                                                        <a href="#" class="btn btn-primary btn-lg o_website_translator">Translate</a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row form-field">
+                                                    <div class="col-lg-3 col-md-4">
+                                                        <label class="col-form-label" for="destination">Destination</label>
+                                                    </div>
+                                                    <div class="col-lg-9 col-md-8">
+                                                        <textarea rows='8' class="form-control" name="destination" required=""/>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </main>
+                            </div>
+                        </div>
+                        <footer class="tm-site-footer">
+                            <p class="tm-black-bg tm-footer-text">Copyright 2021 超级Odoo</p>
+                        </footer>
+                    </div>
+                    </div>
+                </t>
+
+            </t>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="translator" xml:space="preserve">
+
+    <t t-name="translator.display_result">
+        <div class="text-center">
+            <a t-att-href="url"  class="btn btn-primary btn-lg">Download</a>
+        </div>
+    </t>
+
+    <t t-name="translator.processing">
+        <div class="text-center">
+            <p><t t-esc="tips"/><i class="fa fa-refresh fa-spin"></i></p>
+        </div>
+    </t>
+
+    <t t-name="translator.rpc_error">
+        <div class="text-center">
+            <p><strong>Server error:</strong> Unable to contact the Translator server.</p>
+            <p>Please wait ... <i class="fa fa-refresh fa-spin"></i></p>
+        </div>
+    </t>
+
+    <t t-name="translator.exception">
+        <div class="text-center">
+            <pre><t t-esc="exception_msg"/></pre>
+        </div>
+    </t>
+
+</templates>

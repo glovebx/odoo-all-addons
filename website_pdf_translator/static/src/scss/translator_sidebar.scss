@@ -1,0 +1,37 @@
+.hamburger_menus{
+    position: fixed;
+    z-index: 9;
+    .hamburger_container{
+        .hamburger_button{
+            border: none;
+            outline: none;
+            background: transparent;
+            font-size: 30px;
+            color: #099;
+        }
+    }
+    .hamburger_menu_nav{
+        position: absolute;
+        background: rgba(0, 0, 0, 0.6);
+        color: white;
+        top: 60px;
+        min-width: 250px;
+        z-index: 9;
+        ul.navbar-nav{
+            li {
+                padding: 15px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                a {
+                    color: white !important;
+                    text-decoration: none;
+                }
+                &:hover{
+                    background: #099;
+                }
+            }
+            li.active{
+                background: #099;
+            }
+        }
+    }
+}

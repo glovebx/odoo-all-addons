@@ -1,0 +1,32 @@
+.o_main_navbar{
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.5);
+}
+#edit-page-menu{
+    a {
+        border-bottom: 1px solid rgba(0,0,0,0.5) !important;
+        background-color: rgba(0,0,0,0.5) !important;
+    }
+}
+.css_edit_dynamic{
+    border-color: rgba(0,0,0,0.5) !important;
+    background-color: rgba(0,0,0,0.5) !important;
+}
+#wrapwrap {
+    .btn-primary {
+        background-color: #099 !important;
+        outline: none !important;
+        border: none !important;
+    }
+    .btn-secondary {
+        background-color: rgba(0,0,0,0.5) !important;
+        outline: none !important;
+        border: none !important;
+    }
+    p,a,h1,h2,h3,h4,h5,h6 {
+        font-family: 'Open Sans', Arial, Helvetica, sans-serif !important;
+    }
+    .oe_product_cart{
+        border: none !important;
+    }
+}

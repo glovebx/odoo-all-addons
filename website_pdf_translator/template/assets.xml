@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<template priority="100" id="website_pdf_translator_frontend" name="theme_assets" inherit_id="web.assets_frontend">
+        <xpath expr="." position="inside">
+			<link rel="stylesheet" href="/website_pdf_translator/static/src/scss/translator_sidebar.scss"/>
+			<link rel="stylesheet" href="/website_pdf_translator/static/src/fontawesome/css/all.min.css"/>
+			<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet" />
+			<link rel="stylesheet" href="/website_pdf_translator/static/src/scss/translator.scss"/>
+			<link rel="stylesheet" href="/website_pdf_translator/static/src/scss/base.scss"/>
+			<script type="text/javascript" src="/website_pdf_translator/static/src/js/translator_main.js"/>
+			<script type="text/javascript" src="/website_pdf_translator/static/src/js/translator_sidebar.js"/>
+			<script type="text/javascript" src="/website_pdf_translator/static/src/js/translator_upload.js"/>
+		</xpath>
+	</template>
+</odoo>
