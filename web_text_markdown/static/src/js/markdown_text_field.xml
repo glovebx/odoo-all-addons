@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<templates xml:space="preserve">
+    <t t-name="web_text_markdown.MarkdownTextField" owl="1">
+        <div class="o_field_widget oe_form_field o_field_markdown">
+            <textarea
+                class="o_input"
+                t-ref="editor"
+            />            
+        </div>
+    </t>
+</templates>
