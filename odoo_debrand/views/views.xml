@@ -1,0 +1,59 @@
+<odoo>
+  
+  <record id="res_config_settings_view_form" model="ir.ui.view">
+    <field name="name">res.config.settings.view.form.inherit.base.setup</field>
+    <field name="model">res.config.settings</field>
+    <field name="priority" eval="0"/>
+    <field name="inherit_id" ref="base_setup.res_config_settings_view_form"/>
+    <field name="arch" type="xml">
+      <xpath expr="//div[@id='about']" position="replace">
+      </xpath>
+    </field>
+  </record>
+
+
+  <template id="web_layout" inherit_id="web.layout">
+    <xpath expr="//title" position="replace">
+      <title t-esc="title or 'MOCO'"/>
+    </xpath>
+  </template>
+
+
+  <template id="brand_promotion_message" inherit_id="web.brand_promotion_message">
+    <xpath expr="//a" postion="replace">
+      <a target="_blank"
+         t-attf-href="http://www.moco.co?utm_source=db&amp;utm_medium=#{_utm_medium}"
+         class="badge badge-light">
+        <img alt="MOCO"
+             src="/odoo_debrand/static/img/debrand_logo_tiny.png"
+             style="height: 1em; vertical-align: baseline;"/>
+      </a>
+    </xpath>
+  </template>
+
+  <template id="brand_promotion" inherit_id="web.brand_promotion" name="Brand Promotion">
+    <xpath expr="//div" position="replace">
+      <div class="o_brand_promotion">
+	<t t-call="web.brand_promotion_message">
+	  <t t-set="_message" t-value="'MOCO'"></t>
+	  <t t-set="_utm_medium" t-valuef="portal"/>
+	</t>
+      </div>
+    </xpath>
+  </template>
+
+  <template id="login_layout" inherit_id="web.login_layout" name="Login Layout">
+    <xpath expr="//img" position="replace">
+      <img t-attf-src="/odoo_debrand/static/img/debrand_logo_tiny.png" alt="Logo" style="max-height:120px; max-width: 100%; width:auto"/>
+    </xpath>
+
+    <xpath expr="//div/a" position="replace">
+      <a href="https://www.moco.co?utm_source=db&amp;utm_medium=auth" target="_blank">Powered by <span>MOCO</span></a>
+    </xpath>
+  </template>
+
+  
+  
+</odoo>
+
+
